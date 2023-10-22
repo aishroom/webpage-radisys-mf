@@ -24,8 +24,33 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+ 
+    <!-- <script src="%PUBLIC_URL%/engage-digital-click-to-call-config.js"></script>
+    <script src="%PUBLIC_URL%/engage-digital-click-to-call.js"></script> -->
     <title>React App</title>
   </head>
+  <style>
+   #engage-digital-click-to-call-btn {
+
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 20px;
+    min-width: 50px;
+    min-height: 50px;
+    background: linear-gradient(45deg, #0dcaf0, #0d6efd);
+    border: 1px solid silver;
+    color: white;
+    
+}
+.container-fluid{
+  position: absolute;
+  opacity: 0;
+  max-width: 0px;
+}
+  
+
+  </style>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
@@ -39,5 +64,51 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <div class="callButton">
+      <button id="engage-digital-click-to-call-btn"></button>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-9" style="text-align: center;background-color: rgb(209, 224, 200);">
+          <p>
+          <div style="color: #171618;"><strong>Click-to-Call Demo Application (Programmable Audio)</strong></div>
+          </p>
+        </div>
+        <div class="col" style="background-color: rgb(209, 224, 200);">
+          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-9">
+          <br>
+          <div style="color: blue;font-family:Georgia, 'Times New Roman', Times, serif;;">Guide to plug-in Click-to-Call
+            feature to your website</div>
+          <br>
+          <!-- <iframe src="app-guide-content.html" class="guide-content"></iframe> -->
+        </div>
+     
+            <div class="inneraudio">
+  
+              <div class="remoteAudio">
+                <div class="logoIcon">
+                  <img id="initial" class="logo" style="visibility:hidden;display:none; justify-content: center;"
+                    src="mobile-phone.png" alt="Call Logo" width="100" height="100">
+                  <img id="Ringing" style="visibility:hidden;display:none;" src="call.png" alt="CalLRinging" width="100"
+                    height="100">
+                  <img id="Connected" style="visibility:hidden;display:none;" src="phone-call.png" alt="CallConnected"
+                    width="100" height="80">
+                </div>
+                <audio id="engage-digital-remote-audio" autoplay controls></audio>
+              </div>
+  
+            </div>
+            <div class="alert" id='engage-digital-alert'></div>
+          </div>
+  
+      
+    </div>
+    <script src="engage-digital-click-to-call-config.js"></script>
+    <script src="engage-digital-click-to-call.js"></script>
+  
   </body>
 </html>

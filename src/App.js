@@ -5,17 +5,18 @@ import Hero from './components/Hero';
 import Info from './components/Info';
 import Footer from './components/Footer';
 import Services from './components/Services';
+import Form from './components/Form';
+// import Call from './components/Call';
 
 const App = () => {
   return (
     <BrowserRouter>
       <div className="App">
         <Navbar />
-        <Routes>        
+        <Routes>
           <Route path="/" element={<div><Hero /><Info /><Services /></div>} />
-          <Route path="/" element={<Hero />} />
-          <Route path="/info" element={<Info />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/form" element={<Form />} />
+          <Route path="services" element={<Services />} />
         </Routes>
         <Footer />
       </div>
